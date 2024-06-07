@@ -9,3 +9,12 @@ const getMonth = (callback) => {
         }
     }, 4000)
 }
+
+function callback(resolve, reject) {
+    const result = month.map(function (e) {
+        return e
+    })
+
+}
+
+// const showMonth = new Promise(getMonth)
