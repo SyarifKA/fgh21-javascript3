@@ -10,11 +10,15 @@ const getMonth = (callback) => {
     }, 4000)
 }
 
-function callback(resolve, reject) {
-    const result = month.map(function (e) {
-        return e
-    })
+const showMonth = (error, month) => {
+    if (!error) {
+        month.map((m, index) => {
+            console.log((index + 1) + '. ' + m)
+        })
+    } else {
+        console.log(Error)
+        }
+    }
 
-}
 
-// const showMonth = new Promise(getMonth)
+getMonth(showMonth)
